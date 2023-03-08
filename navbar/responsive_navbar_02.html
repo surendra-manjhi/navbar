@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: rgb(32, 32, 32);
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            width: 90vw;
+            border-bottom: 2px solid white;
+        }
+
+        .logo {
+            display: block;
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .link {
+            display: block;
+            padding: 1rem;
+            font-weight: 600;
+            transition: all .4s;
+        }
+
+        .icons {
+            display: flex;
+        }
+
+        .material-icons-outlined {
+            display: block;
+            padding: .82rem;
+            transition: all .4s;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .link:hover,
+        .material-icons-outlined:hover {
+            background-color: brown;
+        }
+
+        @media only screen and (max-width:700px) {
+
+            ul {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width:400px) {
+
+            .logo {
+                padding: .8rem;
+                font-size: 1rem;
+            }
+
+            .material-icons-outlined {
+                padding: .65rem;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo-ctn"><a href="#" class="logo">_lomoa_</a></div>
+
+            <ul>
+                <li class="item"><a href="#" class="link">Home</a></li>
+                <li class="item"><a href="#" class="link">Blog</a></li>
+                <li class="item"><a href="#" class="link">Services</a></li>
+                <li class="item"><a href="#" class="link">About</a></li>
+            </ul>
+
+            <div class="icons">
+                <li class="item"><span class="material-icons-outlined">person_outline</span></li>
+                <li class="item"><span class="material-icons-outlined menu">menu</span></li>
+            </div>
+
+        </nav>
+    </header>
+
+</body>
+
+</html>
